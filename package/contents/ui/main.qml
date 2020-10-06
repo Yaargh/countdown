@@ -17,9 +17,29 @@ Item {
         return tdiff;
     }
 
-    PlasmaComponents.Label {
-        horizontalAlignment: Text.AlignHCenter
-        verticalAlignment: Text.AlignVCenter
-        text: countdown()
+    // Always display the compact view.
+    // Never show the full popup view even if there is space for it.
+    Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
+
+    Plasmoid.compactRepresentation: Item {
+	
+	PlasmaComponents.Label {
+            id: label
+	    text: countdown()
+	}
     }
+
+    Plasmoid.fullRepresentation: Item {
+        Layout.minimumWidth: label.implicitWidth
+        Layout.minimumHeight: label.implicitHeight
+        Layout.preferredWidth: 640 * units.devicePixelRatio
+        Layout.preferredHeight: 480 * units.devicePixelRatio
+        
+        PlasmaComponents.Label {
+            id: label
+            anchors.fill: parent
+            text: countdown()
+            horizontalAlignment: Text.AlignHCenter
+        }
+    }       
 }
