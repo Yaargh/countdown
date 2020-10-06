@@ -1,0 +1,17 @@
+[Desktop Entry]
+Name=Hello World
+Comment=A widget to take over the world!
+
+Type=Service
+Icon=battery
+X-KDE-ServiceTypes=Plasma/Applet
+
+X-Plasma-API=declarativeappletscript
+X-Plasma-MainScript=ui/main.qml
+
+X-KDE-PluginInfo-Author=My Name
+X-KDE-PluginInfo-Email=myemail@gmail.com
+X-KDE-PluginInfo-Name=com.github.zren.helloworld
+X-KDE-PluginInfo-Version=1
+X-KDE-PluginInfo-Website=https://github.com/Zren/plasmoid-helloworld
+X-KDE-PluginInfo-Category=System Information
