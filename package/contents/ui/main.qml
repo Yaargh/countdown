@@ -14,7 +14,10 @@ Item {
         var igdate = new Date("01/20/2021");
         var diff = (igdate.getTime() - nowdate.getTime()) / (1000 * 3600 * 24);
         var tdiff = Math.trunc(diff);
-        return tdiff;
+        if (tdiff < 1) {
+	    tdiff = "Woohoo!";
+	}
+	return tdiff;
     }
 
     // Always display the compact view.
@@ -26,20 +29,22 @@ Item {
 	PlasmaComponents.Label {
             id: label
 	    text: countdown()
+ 
 	}
     }
 
     Plasmoid.fullRepresentation: Item {
         Layout.minimumWidth: label.implicitWidth
         Layout.minimumHeight: label.implicitHeight
-        Layout.preferredWidth: 320 * units.devicePixelRatio
-        Layout.preferredHeight: 240 * units.devicePixelRatio
-        
+        Layout.preferredWidth: 640 * units.devicePixelRatio
+        Layout.preferredHeight: 480 * units.devicePixelRatio
+      
         PlasmaComponents.Label {
             id: label
             anchors.fill: parent
             text: countdown()
             horizontalAlignment: Text.AlignHCenter
+	    verticalAlignment: Text.AlignVCenter
         }
     }       
 }
