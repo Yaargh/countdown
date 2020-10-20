@@ -15,20 +15,24 @@ Item {
         var diff = (igdate.getTime() - nowdate.getTime()) / (1000 * 3600 * 24);
         var tdiff = Math.trunc(diff);
         if (tdiff < 1) {
-	    tdiff = "Woohoo!";
+	    tdiff = "No more";
 	}
 	return tdiff;
     }
 
     // Always display the compact view.
     // Never show the full popup view even if there is space for it.
-    Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
+    //Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
 
     Plasmoid.compactRepresentation: Item {
-	
+        Layout.minimumWidth: label.implicitWidth
+        Layout.minimumHeight: label.implicitHeight
+	    
 	PlasmaComponents.Label {
             id: label
-	    text: countdown()
+	    text: countdown() + " !"
+	    horizontalAlignment: Text.AlignHCenter
+	    verticalAlignment: Text.AlignVCenter
  
 	}
     }
@@ -36,13 +40,14 @@ Item {
     Plasmoid.fullRepresentation: Item {
         Layout.minimumWidth: label.implicitWidth
         Layout.minimumHeight: label.implicitHeight
-        Layout.preferredWidth: 640 * units.devicePixelRatio
-        Layout.preferredHeight: 480 * units.devicePixelRatio
+        Layout.preferredWidth: 320 * units.devicePixelRatio
+        Layout.preferredHeight: 120 * units.devicePixelRatio
       
         PlasmaComponents.Label {
             id: label
             anchors.fill: parent
-            text: countdown()
+	    
+	    text: countdown() + " days until the Tangerine Tyrant is gone."
             horizontalAlignment: Text.AlignHCenter
 	    verticalAlignment: Text.AlignVCenter
         }
