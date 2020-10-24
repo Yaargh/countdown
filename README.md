@@ -31,5 +31,5 @@ Now you can install the plasmoid in Plasma.  You can delete ~/foo now.
 
 `rm -rf ~/foo/*`
 
-`rmdir ~/foo'
+`rmdir ~/foo`
 
