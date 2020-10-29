@@ -31,8 +31,8 @@ Item {
         var diff = (igdate.getTime() - nowdate.getTime()) / (1000 * 3600 * 24);
         var tdiff = Math.trunc(diff);
         if (tdiff < 1) {
-	    tdiff = "No more";
-	}
+	    tdiff = 0;
+	    }
 	return tdiff;
     }
 
@@ -41,9 +41,13 @@ Item {
         Layout.minimumHeight: label.implicitHeight
 	    
 	PlasmaComponents.Label {
-            id: label
+        id: label
 	    text: countdown() + ' days.'
-	    horizontalAlignment: Text.AlignHCenter
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        width: parent.width
+        height: parent.height
+        horizontalAlignment: Text.AlignHCenter
 	    verticalAlignment: Text.AlignVCenter
 	    font.bold: true
         }
@@ -61,7 +65,7 @@ Item {
     Plasmoid.fullRepresentation: Item {
         Layout.minimumWidth: label.implicitWidth
         Layout.minimumHeight: label.implicitHeight
-        Layout.preferredWidth: 320 * units.devicePixelRatio
+        Layout.preferredWidth: 240 * units.devicePixelRatio
         Layout.preferredHeight: 120 * units.devicePixelRatio
       
         PlasmaComponents.Label {
