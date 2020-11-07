@@ -1,5 +1,5 @@
 # countdown
-A plasmoid to countdown until Trump leaves office.
+A KDE plasmoid to count down until Trump leaves office.
 
 I'm not a dev and don't really know how to code.  I'm just having a lark here.
 
