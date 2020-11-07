@@ -1,4 +1,4 @@
-//    Countdown: A KDE plasmoid that counts down the days.
+//    Countdown: A KDE plasmoid that counts down until Tump leaves office.
 //    Copyright 2020 Corry Clinton <corry.clinton@protonmail.com>
 //
 //    This program is free software: you can redistribute it and/or modify
