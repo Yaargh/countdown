@@ -15,8 +15,12 @@ Now install.
 
 Now you can install the plasmoid in Plasma.  You can delete ~/foo now.
 
+I should point out that you should never use `rm -rf` anything on the advice
+of some rando on the Internet nor download a script that uses it, like mine
+does.
+
 `rm -rf ~/foo`
 
 And there you go.  You can use the 'cdowninst.sh' script to install if you are
 on Debian, Ubuntu, etc. or mod it for a different package manager.  ***If you
-happen to have a directory called `foobarfoobartemp` in your home directory you should change the script to use something else or it will get deleted.***
+happen to have a directory called*** `foobarfoobartemp` ***in your home directory you should change the script to use something else or it will get deleted.***
