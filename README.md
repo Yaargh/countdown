@@ -3,25 +3,11 @@ A KDE plasmoid to count down until Trump leaves office.
 
 I'm not a dev and don't really know how to code.  I'm just having a lark here.
 
-## Install this plasmoid from GitHub (instructions valid for Debian/Ubuntu)
+## Install this plasmoid from GitHub
 
-First, update your system.
+First, clone the repo to a directory, say ~/foo
 
-`sudo apt update && sudo apt upgrade -y`
-
-If you don't have Git on your system, make that happen.
-
-`sudo apt install git -y`
-
-Make a directory to download this into and go to that directory.
-
-`mkdir ~/foo`
-
-`cd ~/foo`
-
-Now clone the repo.
-
-`git clone https://github.com/Yaargh/countdown.git`
+'git clone https://github.com/Yaargh/countdown.git ~/foo/'
 
 Now install.
 
@@ -29,7 +15,8 @@ Now install.
 
 Now you can install the plasmoid in Plasma.  You can delete ~/foo now.
 
-`rm -rf ~/foo/*`
+`rm -rf ~/foo`
 
-`rmdir ~/foo`
-
+And there you go.  You can use the 'cdowninst.sh' script to install if you are
+on Debian, Ubuntu, etc. or mod it for a different package manager.  ***If you
+happen to have a directory called 'foobarfoobartemp' in your home directory you should change the script to use something else or it will get deleted.***
