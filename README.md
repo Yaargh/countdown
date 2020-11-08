@@ -7,7 +7,7 @@ I'm not a dev and don't really know how to code.  I'm just having a lark here.
 
 First, clone the repo to a directory, say ~/foo
 
-'git clone https://github.com/Yaargh/countdown.git ~/foo/'
+`git clone https://github.com/Yaargh/countdown.git ~/foo/`
 
 Now install.
 
@@ -19,4 +19,4 @@ Now you can install the plasmoid in Plasma.  You can delete ~/foo now.
 
 And there you go.  You can use the 'cdowninst.sh' script to install if you are
 on Debian, Ubuntu, etc. or mod it for a different package manager.  ***If you
-happen to have a directory called 'foobarfoobartemp' in your home directory you should change the script to use something else or it will get deleted.***
+happen to have a directory called `foobarfoobartemp` in your home directory you should change the script to use something else or it will get deleted.***
